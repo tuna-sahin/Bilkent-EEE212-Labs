@@ -1,2 +1,2 @@
 Using the file (test.hex) from the previous lab which had subroutines for keypad input and lcd output, I wrote the code that is required
-The subroutines up until delay are written by me and also the keyboard loop subroutine.
+The subroutines up until setup are written by me (excluding delay)
