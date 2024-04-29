@@ -1,0 +1,4 @@
+4/5/2024 5:56:51 PM
+Exception occured in functionprog_execute_command
+Exception Message: Cannot focus a disabled or invisible window
+
