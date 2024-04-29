@@ -66,5 +66,4 @@ int main(void){
 			delay(1500000);	
 		}
 	}
-}
-
+}				
