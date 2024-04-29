@@ -66,4 +66,38 @@ int main(void){
 			delay(1500000);	
 		}
 	}
-}				
+}
+
+//Here is the shortened version with 31 lines: (i did not try it)
+
+/*#include <MKL25Z4.h>
+volatile int sign = 1;
+void PORTD_IRQHandler(void);
+void PORTD_IRQHandler(void) {
+	sign = sign * -1; //change sign
+	PORTD->ISFR = 0xffffffff; //clear flags
+	return;
+}
+int main(void);
+int main(void){
+   	SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK | SIM_SCGC5_PORTD_MASK; // Enable clock to PORTB 
+   	PORTE->PCR[20] |= PORT_PCR_MUX(3);  // PTE20: TPM1_CH0 (ALT3)   
+   	SIM->SOPT2 |= SIM_SOPT2_TPMSRC(1); // Select FLL as the Clock to TPM (PWM)   
+   	SIM->SCGC6 |= SIM_SCGC6_TPM1(1); // Enable clock to TPM2 (PWM) Module    
+    	TPM1->SC |= (TPM_SC_PS(7) | TPM_SC_CPWMS(0)| TPM_SC_CMOD(1));// Configure as edge aligned PWM. Clock prescaler is 7 (PWM clock dİvided by 128). This makes PWM clock as 48000000/128 = 375000 Hz (375Khz) 
+    	TPM1_C0SC |= (TPM_CnSC_ELSB(1) | TPM_CnSC_ELSA(0) | TPM_CnSC_MSB(1)  | TPM_CnSC_MSA(0));	// Configured as Edge Aligned PWM						
+	PORTD->PCR[7] = (PORT_PCR_PE_MASK | PORT_PCR_MUX(1) | PORT_PCR_IRQC(9)) & (~(PORT_PCR_PS_MASK));//rising edge triggered gpio interrupt & pulldown resistor
+	FPTD->PDDR &= ~(1UL << 7);
+	NVIC_SetPriority(PORTD_IRQn, 128);//enable interrupts for port d
+	NVIC_ClearPendingIRQ(PORTD_IRQn);
+	NVIC_EnableIRQ(PORTD_IRQn);
+	TPM1_MOD = (uint16_t)3280; 	
+	int angles[] = {90,60,30,0,30,60}; //array of angles to sweep	
+	while(1){
+		FPTB->PTOR |= (1<<18);
+		for (int j = 0;j<6;j++){		
+		TPM1_C0V = (uint16_t)fit(90-(((int)((double)angles[j] * 1.7055) + 82)*sign));	//90 +/- angles[j] so it is either 30 or 150 based on the sign
+		for(i = 0;i < 1500000;i++){}
+		}
+	}
+}*/
