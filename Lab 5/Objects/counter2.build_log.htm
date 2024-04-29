@@ -1,0 +1,168 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Tuna Sahin, Bilkent University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.6.0
+Target DLL:      PEMicro\Pemicro_ArmCortexInterface.dll V1.3.0.0
+Dialog DLL:      TARMCM1.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+C:\Users\sahin\Documents\C\counter 2\counter2.uvprojx
+Project File Date:  04/05/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling system_MKL25Z4.c...
+main.c(56): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+   56 |         uint32_t count = 0; //variable to hold the count
+      |                  ^
+main.c(22): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   22 |         PORTB->PCR[8] &= ~PORT_PCR_MUX_MASK;
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4446): note: expanded from macro 'PORTB'
+ 4446 | #define PORTB                                    ((PORT_Type *)PORTB_BASE)
+      |                                                  ^
+main.c(23): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   23 |         PORTB->PCR[8] |= PORT_PCR_MUX(1);
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4446): note: expanded from macro 'PORTB'
+ 4446 | #define PORTB                                    ((PORT_Type *)PORTB_BASE)
+      |                                                  ^
+main.c(24): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   24 |         PORTB->PCR[9] &= ~PORT_PCR_MUX_MASK;
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4446): note: expanded from macro 'PORTB'
+ 4446 | #define PORTB                                    ((PORT_Type *)PORTB_BASE)
+      |                                                  ^
+main.c(25): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   25 |         PORTB->PCR[9] |= PORT_PCR_MUX(1);
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4446): note: expanded from macro 'PORTB'
+ 4446 | #define PORTB                                    ((PORT_Type *)PORTB_BASE)
+      |                                                  ^
+main.c(26): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   26 |         PORTB->PCR[10] &= ~PORT_PCR_MUX_MASK;
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4446): note: expanded from macro 'PORTB'
+ 4446 | #define PORTB                                    ((PORT_Type *)PORTB_BASE)
+      |                                                  ^
+main.c(27): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   27 |         PORTB->PCR[10] |= PORT_PCR_MUX(1);
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4446): note: expanded from macro 'PORTB'
+ 4446 | #define PORTB                                    ((PORT_Type *)PORTB_BASE)
+      |                                                  ^
+main.c(28): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   28 |         PORTB->PCR[11] &= ~PORT_PCR_MUX_MASK;
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4446): note: expanded from macro 'PORTB'
+ 4446 | #define PORTB                                    ((PORT_Type *)PORTB_BASE)
+      |                                                  ^
+main.c(29): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   29 |         PORTB->PCR[11] |= PORT_PCR_MUX(1);
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4446): note: expanded from macro 'PORTB'
+ 4446 | #define PORTB                                    ((PORT_Type *)PORTB_BASE)
+      |                                                  ^
+main.c(32): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   32 |         PORTE->PCR[5] &= ~PORT_PCR_MUX_MASK;
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4461): note: expanded from macro 'PORTE'
+ 4461 | #define PORTE                                    ((PORT_Type *)PORTE_BASE)
+      |                                                  ^
+main.c(33): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   33 |         PORTE->PCR[5] |= PORT_PCR_MUX(1);
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4461): note: expanded from macro 'PORTE'
+ 4461 | #define PORTE                                    ((PORT_Type *)PORTE_BASE)
+      |                                                  ^
+main.c(34): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   34 |         PORTE->PCR[4] &= ~PORT_PCR_MUX_MASK;
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4461): note: expanded from macro 'PORTE'
+ 4461 | #define PORTE                                    ((PORT_Type *)PORTE_BASE)
+      |                                                  ^
+main.c(35): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   35 |         PORTE->PCR[4] |= PORT_PCR_MUX(1);
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4461): note: expanded from macro 'PORTE'
+ 4461 | #define PORTE                                    ((PORT_Type *)PORTE_BASE)
+      |                                                  ^
+main.c(36): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   36 |         PORTE->PCR[3] &= ~PORT_PCR_MUX_MASK;
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4461): note: expanded from macro 'PORTE'
+ 4461 | #define PORTE                                    ((PORT_Type *)PORTE_BASE)
+      |                                                  ^
+main.c(37): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   37 |         PORTE->PCR[3] |= PORT_PCR_MUX(1);
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4461): note: expanded from macro 'PORTE'
+ 4461 | #define PORTE                                    ((PORT_Type *)PORTE_BASE)
+      |                                                  ^
+main.c(40): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   40 |         PORTD->PCR[1] &= ~PORT_PCR_MUX_MASK;
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4456): note: expanded from macro 'PORTD'
+ 4456 | #define PORTD                                    ((PORT_Type *)PORTD_BASE)
+      |                                                  ^
+main.c(41): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   41 |         PORTD->PCR[1] |= PORT_PCR_MUX(1);
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4456): note: expanded from macro 'PORTD'
+ 4456 | #define PORTD                                    ((PORT_Type *)PORTD_BASE)
+      |                                                  ^
+17 warnings generated.
+compiling main.c...
+assembling startup_MKL25Z4.s...
+linking...
+Program Size: Code=848 RO-data=208 RW-data=0 ZI-data=352  
+".\Objects\counter2.axf" - 0 Error(s), 17 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM::CMSIS@6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.1.pack
+                Keil::Kinetis_KLxx_DFP@1.15.1
+                NXP Kinetis KLxx Series Device Support and Examples
+   * Component: Startup Version: 2.5.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/MKL25Z128xxx4
+  ./RTE/_Target_1
+  C:/Users/sahin/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.0.0
+
+   * Component: Keil::Device:Startup@2.5.0
+      Source file:   Device/Source/ARM/startup_MKL25Z4.s
+      Source file:   Device/Source/system_MKL25Z4.c
+      Include file:  Device/Source/system_MKL25Z4.h
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
