@@ -21,28 +21,13 @@ void portd_interrupt_init() {
 
 static void pwm_init(void);
 static void pwm_init(void)
-{
-    // Enable clock to PORTB
-    SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK; 
-     
-    // PTB18: TPM2_CH0 (ALT3)
-    PORTE_PCR20 |= PORT_PCR_MUX(3);
-
-    // Select FLL as the Clock to TPM (PWM)
-    SIM->SOPT2 |= SIM_SOPT2_TPMSRC(1);
-     
-    // Enable clock to TPM2 (PWM) Module
-    SIM->SCGC6 |= SIM_SCGC6_TPM1(1);
-     
-    // Configure as edge aligned PWM
-    TPM1->SC |= (TPM_SC_PS(7) | TPM_SC_CPWMS(0)| TPM_SC_CMOD(1));
-     
-    // Clock prescaler is 7 (PWM clock devided by 128)
-    // This makes PWM clock as 48000000/128 = 375000 Hz (375Khz)
-   
-    // Configured as Edge Aligned PWM
-    TPM1_C0SC |= (TPM_CnSC_ELSB(1) | TPM_CnSC_ELSA(0) |
-                  TPM_CnSC_MSB(1)  | TPM_CnSC_MSA(0));									
+{    
+    SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK; // Enable clock to PORTB 
+    PORTE_PCR20 |= PORT_PCR_MUX(3);  // PTB18: TPM2_CH0 (ALT3)   
+    SIM->SOPT2 |= SIM_SOPT2_TPMSRC(1); // Select FLL as the Clock to TPM (PWM)   
+    SIM->SCGC6 |= SIM_SCGC6_TPM1(1); // Enable clock to TPM2 (PWM) Module    
+    TPM1->SC |= (TPM_SC_PS(7) | TPM_SC_CPWMS(0)| TPM_SC_CMOD(1));// Configure as edge aligned PWM. Clock prescaler is 7 (PWM clock devided by 128). This makes PWM clock as 48000000/128 = 375000 Hz (375Khz) 
+    TPM1_C0SC |= (TPM_CnSC_ELSB(1) | TPM_CnSC_ELSA(0) | TPM_CnSC_MSB(1)  | TPM_CnSC_MSA(0));	// Configured as Edge Aligned PWM								
 }
 
 void PORTD_IRQHandler(void);
