@@ -70,7 +70,7 @@ int main(void){
 
 //Here is the shortened version with 31 lines: (i did not try it)
 
-/*#include <MKL25Z4.h>
+#include <MKL25Z4.h>
 volatile int sign = 1;
 void PORTD_IRQHandler(void);
 void PORTD_IRQHandler(void) {
@@ -100,4 +100,4 @@ int main(void){
 		for(i = 0;i < 1500000;i++){}
 		}
 	}
-}*/
+}
