@@ -1,0 +1,267 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Tuna Sahin, Bilkent University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.6.0
+Target DLL:      PEMicro\Pemicro_ArmCortexInterface.dll V1.3.0.0
+Dialog DLL:      TARMCM1.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+C:\Users\sahin\Documents\C\grad2\grad2.uvprojx
+Project File Date:  03/29/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_MKL25Z4.s...
+compiling system_MKL25Z4.c...
+grad2.c(2): warning: no previous extern declaration for non-static variable 'red' [-Wmissing-variable-declarations]
+    2 | volatile int red = 26;
+      |              ^
+grad2.c(2): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    2 | volatile int red = 26;
+      |          ^
+grad2.c(3): warning: no previous extern declaration for non-static variable 'green' [-Wmissing-variable-declarations]
+    3 | volatile int green = 237;
+      |              ^
+grad2.c(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    3 | volatile int green = 237;
+      |          ^
+grad2.c(4): warning: no previous extern declaration for non-static variable 'blue' [-Wmissing-variable-declarations]
+    4 | volatile int blue = 202;
+      |              ^
+grad2.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    4 | volatile int blue = 202;
+      |          ^
+grad2.c(5): warning: no previous extern declaration for non-static variable 'alpha' [-Wmissing-variable-declarations]
+    5 | volatile int alpha = 255;
+      |              ^
+grad2.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    5 | volatile int alpha = 255;
+      |          ^
+grad2.c(28): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   28 |         FPTC->PDDR &= ~((1<<2)|(1<<1)|(1<<0));
+      |                    ~~ ^~~~~~~~~~~~~~~~~~~~~~~
+grad2.c(157): warning: variable 'freq' set but not used [-Wunused-but-set-variable]
+  157 |         int freq;
+      |             ^
+grad2.c(186): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  186 |                 double nf = 255.0 / max;
+      |                        ^
+grad2.c(237): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  237 |         double red_ratio = (double)((red_freq/alpha_freq)*(1.2));
+      |                ^
+grad2.c(262): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  262 |         double c = 0;
+      |                ^
+grad2.c(18): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   18 |         PORTB->PCR[1] |= PORT_PCR_MUX(1); //S3 TCS3200
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4446): note: expanded from macro 'PORTB'
+ 4446 | #define PORTB                                    ((PORT_Type *)PORTB_BASE)
+      |                                                  ^
+grad2.c(19): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   19 |         PORTB->PCR[2] |= PORT_PCR_MUX(1); //BUZZER
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4446): note: expanded from macro 'PORTB'
+ 4446 | #define PORTB                                    ((PORT_Type *)PORTB_BASE)
+      |                                                  ^
+grad2.c(22): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   22 |         PORTC->PCR[1] |= PORT_PCR_MUX(1); //button
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4451): note: expanded from macro 'PORTC'
+ 4451 | #define PORTC                                    ((PORT_Type *)PORTC_BASE)
+      |                                                  ^
+grad2.c(23): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   23 |         PORTC->PCR[2] |= PORT_PCR_MUX(1); //OUT TCS3200
+      |         ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4451): note: expanded from macro 'PORTC'
+ 4451 | #define PORTC                                    ((PORT_Type *)PORTC_BASE)
+      |                                                  ^
+grad2.c(39): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   39 |     PORTB_PCR18 |= PORT_PCR_MUX(3);
+      |     ^~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4536): note: expanded from macro 'PORTB_PCR18'
+ 4536 | #define PORTB_PCR18                              PORT_PCR_REG(PORTB,18)
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4355): note: expanded from macro 'PORT_PCR_REG'
+ 4355 | #define PORT_PCR_REG(base,index)                 ((base)->PCR[index])
+      |                                                   ^~~~~~~~~~~
+grad2.c(40): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   40 |                 PORTB_PCR19 |= PORT_PCR_MUX(3);
+      |                 ^~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4537): note: expanded from macro 'PORTB_PCR19'
+ 4537 | #define PORTB_PCR19                              PORT_PCR_REG(PORTB,19)
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4355): note: expanded from macro 'PORT_PCR_REG'
+ 4355 | #define PORT_PCR_REG(base,index)                 ((base)->PCR[index])
+      |                                                   ^~~~~~~~~~~
+grad2.c(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |                 TPM2_C1SC |= (TPM_CnSC_ELSB(1) | TPM_CnSC_ELSA(0) |
+      |                 ^~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6317): note: expanded from macro 'TPM2_C1SC'
+ 6317 | #define TPM2_C1SC                                TPM_CnSC_REG(TPM2,1)
+      |                                                  ^~~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6095): note: expanded from macro 'TPM_CnSC_REG'
+ 6095 | #define TPM_CnSC_REG(base,index)                 ((base)->CONTROLS[index].CnSC)
+      |                                                   ^~~~~~~~~~~~~~~~
+grad2.c(73): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   73 |     PORTD_PCR1 |= PORT_PCR_MUX(4);
+      |     ^~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4591): note: expanded from macro 'PORTD_PCR1'
+ 4591 | #define PORTD_PCR1                               PORT_PCR_REG(PORTD,1)
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4355): note: expanded from macro 'PORT_PCR_REG'
+ 4355 | #define PORT_PCR_REG(base,index)                 ((base)->PCR[index])
+      |                                                   ^~~~~~~~~~~
+grad2.c(91): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   91 |                 TPM0_C1SC |= (TPM_CnSC_ELSB(1) | TPM_CnSC_ELSA(0) |
+      |                 ^~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6289): note: expanded from macro 'TPM0_C1SC'
+ 6289 | #define TPM0_C1SC                                TPM_CnSC_REG(TPM0,1)
+      |                                                  ^~~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6095): note: expanded from macro 'TPM_CnSC_REG'
+ 6095 | #define TPM_CnSC_REG(base,index)                 ((base)->CONTROLS[index].CnSC)
+      |                                                   ^~~~~~~~~~~~~~~~
+grad2.c(96): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   96 |                 TPM0_C1V = (uint16_t)900;
+      |                 ^~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6290): note: expanded from macro 'TPM0_C1V'
+ 6290 | #define TPM0_C1V                                 TPM_CnV_REG(TPM0,1)
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6097): note: expanded from macro 'TPM_CnV_REG'
+ 6097 | #define TPM_CnV_REG(base,index)                  ((base)->CONTROLS[index].CnV)
+      |                                                   ^~~~~~~~~~~~~~~~
+grad2.c(106): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  106 |     PORTE_PCR20 |= PORT_PCR_MUX(3);
+      |     ^~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4646): note: expanded from macro 'PORTE_PCR20'
+ 4646 | #define PORTE_PCR20                              PORT_PCR_REG(PORTE,20)
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4355): note: expanded from macro 'PORT_PCR_REG'
+ 4355 | #define PORT_PCR_REG(base,index)                 ((base)->PCR[index])
+      |                                                   ^~~~~~~~~~~
+grad2.c(133): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  133 |     PORTE_PCR21 |= PORT_PCR_MUX(3);
+      |     ^~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4647): note: expanded from macro 'PORTE_PCR21'
+ 4647 | #define PORTE_PCR21                              PORT_PCR_REG(PORTE,21)
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(4355): note: expanded from macro 'PORT_PCR_REG'
+ 4355 | #define PORT_PCR_REG(base,index)                 ((base)->PCR[index])
+      |                                                   ^~~~~~~~~~~
+grad2.c(148): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  148 |     TPM1_C1SC |= (TPM_CnSC_ELSB(1) | TPM_CnSC_ELSA(0) | TPM_CnSC_MSB(1)  | TPM_CnSC_MSA(0));                                                                    
+      |     ^~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6307): note: expanded from macro 'TPM1_C1SC'
+ 6307 | #define TPM1_C1SC                                TPM_CnSC_REG(TPM1,1)
+      |                                                  ^~~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6095): note: expanded from macro 'TPM_CnSC_REG'
+ 6095 | #define TPM_CnSC_REG(base,index)                 ((base)->CONTROLS[index].CnSC)
+      |                                                   ^~~~~~~~~~~~~~~~
+grad2.c(277): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  277 |                         TPM1_C1V = (uint16_t)fit(92.1); //slow turn
+      |                         ^~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6308): note: expanded from macro 'TPM1_C1V'
+ 6308 | #define TPM1_C1V                                 TPM_CnV_REG(TPM1,1)
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6097): note: expanded from macro 'TPM_CnV_REG'
+ 6097 | #define TPM_CnV_REG(base,index)                  ((base)->CONTROLS[index].CnV)
+      |                                                   ^~~~~~~~~~~~~~~~
+grad2.c(299): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  299 |                         TPM2_C1V = 900UL+(uint16_t)((double)green / (0.272));
+      |                         ^~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6318): note: expanded from macro 'TPM2_C1V'
+ 6318 | #define TPM2_C1V                                 TPM_CnV_REG(TPM2,1)
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6097): note: expanded from macro 'TPM_CnV_REG'
+ 6097 | #define TPM_CnV_REG(base,index)                  ((base)->CONTROLS[index].CnV)
+      |                                                   ^~~~~~~~~~~~~~~~
+grad2.c(300): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  300 |                         TPM0_C1V = 900UL+(uint16_t)((double)blue / (0.272));
+      |                         ^~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6290): note: expanded from macro 'TPM0_C1V'
+ 6290 | #define TPM0_C1V                                 TPM_CnV_REG(TPM0,1)
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6097): note: expanded from macro 'TPM_CnV_REG'
+ 6097 | #define TPM_CnV_REG(base,index)                  ((base)->CONTROLS[index].CnV)
+      |                                                   ^~~~~~~~~~~~~~~~
+grad2.c(305): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  305 |                         TPM2_C1V = 900UL+(uint16_t)((double)green / (0.272));
+      |                         ^~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6318): note: expanded from macro 'TPM2_C1V'
+ 6318 | #define TPM2_C1V                                 TPM_CnV_REG(TPM2,1)
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6097): note: expanded from macro 'TPM_CnV_REG'
+ 6097 | #define TPM_CnV_REG(base,index)                  ((base)->CONTROLS[index].CnV)
+      |                                                   ^~~~~~~~~~~~~~~~
+grad2.c(306): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  306 |                         TPM0_C1V = 900UL+(uint16_t)((double)blue / (0.272));
+      |                         ^~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6290): note: expanded from macro 'TPM0_C1V'
+ 6290 | #define TPM0_C1V                                 TPM_CnV_REG(TPM0,1)
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6097): note: expanded from macro 'TPM_CnV_REG'
+ 6097 | #define TPM_CnV_REG(base,index)                  ((base)->CONTROLS[index].CnV)
+      |                                                   ^~~~~~~~~~~~~~~~
+grad2.c(309): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  309 |                         TPM1_C1V = (uint16_t)fit(95); 
+      |                         ^~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6308): note: expanded from macro 'TPM1_C1V'
+ 6308 | #define TPM1_C1V                                 TPM_CnV_REG(TPM1,1)
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include\MKL25Z4.h(6097): note: expanded from macro 'TPM_CnV_REG'
+ 6097 | #define TPM_CnV_REG(base,index)                  ((base)->CONTROLS[index].CnV)
+      |                                                   ^~~~~~~~~~~~~~~~
+28 warnings generated.
+compiling grad2.c...
+linking...
+Program Size: Code=5968 RO-data=352 RW-data=12 ZI-data=352  
+".\Objects\grad2.axf" - 0 Error(s), 28 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM::CMSIS@6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.1.pack
+                Keil::Kinetis_KLxx_DFP@1.15.1
+                NXP Kinetis KLxx Series Device Support and Examples
+   * Component: Startup Version: 2.5.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/MKL25Z128xxx4
+  ./RTE/_Target_1
+  C:/Users/sahin/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  C:/Users/sahin/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.0.0
+
+   * Component: Keil::Device:Startup@2.5.0
+      Source file:   Device/Source/ARM/startup_MKL25Z4.s
+      Source file:   Device/Source/system_MKL25Z4.c
+      Include file:  Device/Source/system_MKL25Z4.h
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
