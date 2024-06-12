@@ -68,7 +68,7 @@ int main(void){
 	}
 }
 
-//Here is the shortened version with 31 lines: (i did not try it)
+//Here is the shortened version with 31 lines: (i did not try if it works)
 
 #include <MKL25Z4.h>
 volatile int sign = 1;
