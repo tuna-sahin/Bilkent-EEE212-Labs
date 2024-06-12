@@ -96,7 +96,7 @@ int main(void){
 	while(1){
 		FPTB->PTOR |= (1<<18);
 		for (int j = 0;j<6;j++){		
-		TPM1_C0V = (uint16_t)fit(90-(((int)((double)angles[j] * 1.7055) + 82)*sign));	//90 +/- angles[j] so it is either 30 or 150 based on the sign
+		TPM1_C0V = (uint16_t)(((int)((double)(90-angles[j]) * 1.7055) + 82)*sign);	//90 +/- angles[j] so it is either 30 or 150 based on the sign
 		for(i = 0;i < 1500000;i++){}
 		}
 	}
